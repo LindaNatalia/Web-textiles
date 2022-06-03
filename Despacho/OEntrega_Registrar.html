@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <title>Textiles El Redil</title>
+</head>
+<body>
+    <header>
+        <div class="row fixed-top">
+            <header class="p-3 mb-3 border-bottom bg-dark text-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a class="navbar-brand" href="#">
+                            <img src="img-icon/logo.jpeg" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                            Textiles El Redil
+                        <a class="navbar-brand"></a>
+                        </a>
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                        </a>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ">
+                        <li><a href="#seccion2" class="nav-link px-2 text-white">Ventas</a></li>
+                        <li><a href="#seccion1" class="nav-link px-2 text-white">Inventario</a></li>
+                        <li><a href="#seccion2" class="nav-link px-2 text-white">Proveedores</a></li>
+                        <li><a href="#seccion1" class="nav-link px-2 text-white">Despacho</a></li>
+                        <li><a href="#seccion2" class="nav-link px-2 text-white">Novedades Personal</a></li>
+                    </ul>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    </form>
+                    <div class="dropdown">
+                      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>Usuario</strong>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" style ="">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Configuración</a></li>
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </header>
+        </div>
+    </header>
+    <section id="seccion1"> 
+        <div class="container">
+            <h2>Orden de entrega</h2>
+            <form class="form-control needs-validation" novalidate action="../Despacho/OEntrega_Consultar.html" method="post">
+                <h5> Orden de Entrega</h5>
+
+                <label class="form-control-label" id="id_ordenPago">Id Orden de Venta: </label>
+                <input type="text" name="id_ordenVenta" class="form-control" placeholder="Ingrese Id Orden de Venta" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="nombre">Nombre Cliente: </label>
+                <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="correo">Correo: </label>
+                <input type="email" name="correo" class="form-control" placeholder="Ingrese el correo" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="fechaVenta">Fecha de Venta: </label>
+                <input type="date" name="fechaVenta" class="form-control" placeholder="Ingrese la fecha de venta" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="fechaEntrega">Fecha de Entrega: </label>
+                <input type="date" name="fechaEntrega" class="form-control" placeholder="Ingrese la fecha de entrega" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="celular">Celular: </label>
+                <input type="text" name="celular" class="form-control" placeholder="Ingrese su número de celular" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="dirección">Dirección: </label>
+                <input type="text" name="dirección" class="form-control" placeholder="Ingrese la dirección de entrega" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="barrio">Barrio: </label>
+                <input type="text" name="barrio" class="form-control" placeholder="Ingrese el barrio" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="idProducto">Id Producto: </label>
+                <input type="text" name="idProducto" class="form-control" placeholder="Ingrese Id Producto" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="cantidad">Cantidad Producto: </label>
+                <input type="text" name="cantidad" class="form-control" placeholder="Ingrese la cantidad del Producto" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="valorRecibido">Valor Recibido: </label>
+                <input type="text" name="valorRecibido" class="form-control" placeholder="Ingrese el valor recibido" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <label class="form-control-label" id="valorTotal">Valor Total: </label>
+                <input type="text" name="valorTotal" class="form-control" placeholder="Ingrese el valor total" required="true">
+                <div class="valid-feedback">Validado ok</div>
+                <div class="invalid-feedback">Debe completar este campo</div>
+
+                <div class="vstack gap-2 col-md-5 mx-auto">
+                    <button class="btn btn-success">Registrar</button>
+                    <button type="button" class="btn btn-outline-secondary">Cancelar</button>
+                </div>
+            </form>
+            </form>
+
+        </div>
+    </section>
+
+
+    <section id="">
+        <div class="row ">
+        <div class="container">
+            <footer class="py-3 my-4">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#seccion1">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#seccion2">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#seccion3">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#seccion4">Contáctenos</a>
+                </li>
+              </ul>
+              <p class="text-center text-muted">© 2022 Textiles El Redil Inc</p>
+            </footer>
+          </div>
+        </div>
+    </section>
+
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            } else {
+                alert('registro exitoso')
+            }
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+</script>
+
+</html>

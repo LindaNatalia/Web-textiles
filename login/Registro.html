@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../css/estilos.css" >
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+
+	</head>
+<body>
+    
+    <div class="container d-flex flex-column">
+		<div class="row align-items-center justify-content-center g-0 min-vh-100">
+			<div class="col-lg-5 col-md-8 py-8 py-xl-0">
+				<!-- Card -->
+				<div class="card shadow">
+					<!-- Card body -->
+					<div class="card-body p-6">
+						<div class="mb-4">
+							<a href="../index.html"><img src="../img-icon/Logo-ST.jpg"width="120" class="mb-4" alt=""></a>
+							<h1 class="mb-1 fw-bold">Registrarse</h1>
+							<span> Ya estas registrado?
+								<a href="sign-in.html" class="ms-1">Registrese</a></span>
+						</div>
+						<!-- Form -->
+						<form class="form-control needs-validation" novalidate >
+								<!-- Username -->
+							<div class="mb-3">
+								<label for="username" class="form-label">Nombre Usuario</label>
+								<input type="text" id="username" class="form-control" name="username" placeholder="User Name" required="">
+								<div class="valid-feedback"> validado ok</div> 
+								<div class="invalid-feedback">Debe llenar este campo</div>
+							</div>
+								<!-- Email -->
+							<div class="mb-3">
+								<label for="email" class="form-label">E-mail</label>
+								<input type="email" id="email" class="form-control" name="email" placeholder="Email address here" required="">
+								<div class="valid-feedback"> validado ok</div> 
+								<div class="invalid-feedback">Debe llenar este campo</div>
+							</div>
+								<!-- Password -->
+							<div class="mb-3">
+								<label for="password" class="form-label">Contraseña</label>
+								<input type="password" id="password" class="form-control" name="password" placeholder="**************" required="">
+								<div class="valid-feedback"> validado ok</div> 
+								<div class="invalid-feedback">Debe llenar este campo</div>
+							</div>
+								<!-- Checkbox -->
+							<div class="mb-3">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="agreeCheck" required="">
+									<div class="valid-feedback"> validado ok</div> 
+									<div class="invalid-feedback">Debe llenar este campo</div>
+									<label class="form-check-label" for="agreeCheck"><span>Estoy de acuerdo  <a href="terms-condition-page.html">
+												con el servicio </a>y
+											<a href="terms-condition-page.html">Politicas de Privacidad.</a></span></label>
+								</div>
+							</div>
+							<div>
+									<!-- Button -->
+									<div class="d-grid">
+									<a href="../textilesElRedil/pagina base.html">
+										<button type="submit" class="btn btn-primary">
+											Crear una Cuenta
+										</button>
+									</a>
+								</div>
+							</div>
+							<hr class="my-4">
+							<div class="mt-4 text-center">
+								<!--Facebook-->
+								<a href="#" class="btn-social btn-social-outline btn-facebook">
+									<i class="mdi mdi-facebook fs-4"></i>
+								</a>
+								<!--Twitter-->
+								<a href="#" class="btn-social btn-social-outline btn-twitter">
+									<i class="mdi mdi-twitter fs-4"></i>
+								</a>
+								<!--LinkedIn-->
+								<a href="#" class="btn-social btn-social-outline btn-linkedin">
+									<i class="mdi mdi-linkedin"></i>
+								</a>
+								<!--GitHub-->
+								<a href="#" class="btn-social btn-social-outline btn-github">
+									<i class="mdi mdi-github"></i>
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>    
+<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function () {
+		'use strict'
+	
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
+	
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms)
+			.forEach(function (form) {
+			form.addEventListener('submit', function (event) {
+				if (!form.checkValidity()) {
+				event.preventDefault()
+				event.stopPropagation()
+				}
+	
+				form.classList.add('was-validated')
+			}, false)
+			})
+		})()
+	</script> 
+
+</body>
+</html>

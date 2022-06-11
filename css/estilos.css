@@ -53,3 +53,17 @@ h1{
     font-family: 'Andada Pro', serif;
     color:rgb(82, 10, 10);
 }
+
+table th {
+    background-color: rgb(87, 87, 141) !important;
+    color : white
+}
+
+table>tbody>tr>td {
+    vertical-align: middle !important;
+}
+
+/*para alinear los botones y cuadro de busqueda*/
+.btn-group, .btn-group-vertical {
+    position: absolute !important;
+}

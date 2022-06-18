@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+<!--datatable-->
+<link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.12.1/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
     <title>Textiles El Redil</title>
 </head>
 <body>
@@ -56,79 +61,88 @@
     <section id="seccion1"> 
         <div class="container">
             <h2>Orden de entrega</h2>
-            <form class="form-control needs-validation" novalidate action="../Despacho/OEntrega_Consultar.html" method="post">
-                <h5> Orden de Entrega</h5>
-
-                <label class="form-control-label" id="id_ordenPago">Id Orden de Venta: </label>
-                <input type="text" name="id_ordenVenta" class="form-control" placeholder="Ingrese Id Orden de Venta" required="true">
+            <form class="form-control needs-validation" novalidate action="#" method="post">
+                <h5> Consultar Orden de Entrega</h5>
+                <label class="form-control-label" id="id_ordenPago">Id Orden de Entrega: </label>
+                <input type="text" name="id_ordenEntrega" class="form-control" placeholder="Ingrese Id Orden de Entrega" required="true">
                 <div class="valid-feedback">Validado ok</div>
                 <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="nombre">Nombre Cliente: </label>
-                <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="correo">Correo: </label>
-                <input type="email" name="correo" class="form-control" placeholder="Ingrese el correo" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="fechaVenta">Fecha de Venta: </label>
-                <input type="date" name="fechaVenta" class="form-control" placeholder="Ingrese la fecha de venta" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="fechaEntrega">Fecha de Entrega: </label>
-                <input type="date" name="fechaEntrega" class="form-control" placeholder="Ingrese la fecha de entrega" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="celular">Celular: </label>
-                <input type="text" name="celular" class="form-control" placeholder="Ingrese su número de celular" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="dirección">Dirección: </label>
-                <input type="text" name="dirección" class="form-control" placeholder="Ingrese la dirección de entrega" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="barrio">Barrio: </label>
-                <input type="text" name="barrio" class="form-control" placeholder="Ingrese el barrio" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="idProducto">Id Producto: </label>
-                <input type="text" name="idProducto" class="form-control" placeholder="Ingrese Id Producto" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="cantidad">Cantidad Producto: </label>
-                <input type="text" name="cantidad" class="form-control" placeholder="Ingrese la cantidad del Producto" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="valorRecibido">Valor Recibido: </label>
-                <input type="text" name="valorRecibido" class="form-control" placeholder="Ingrese el valor recibido" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
-                <label class="form-control-label" id="valorTotal">Valor Total: </label>
-                <input type="text" name="valorTotal" class="form-control" placeholder="Ingrese el valor total" required="true">
-                <div class="valid-feedback">Validado ok</div>
-                <div class="invalid-feedback">Debe completar este campo</div>
-
+                
                 <div class="vstack gap-2 col-md-5 mx-auto">
-                    <button class="btn btn-success">Registrar</button>
+                    <button class="btn btn-success">Consultar</button>
                     <button type="button" class="btn btn-outline-secondary">Cancelar</button>
                 </div>
             </form>
 
-
         </div>
     </section>
+    <section>
+        <div class="container">
+            <h2>Listado</h2>
+            <div class="table-responsive">
+                <table id="example" class="table table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Id Orden de Entrega</th>
+                      <th scope="col">Fecha de entrega</th>
+                      <th scope="col">Cliente</th>
+                      <th scope="col">Producto</th>
+                      <th scope="col">Valor total</th>
+                      <th scope="col">Modificar</th>
+                      <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1,001</td>
+                      <td>random</td>
+                      <td>data</td>
+                      <td>placeholder</td>
+                      <td>text</td>
+                      <td>
+                        <a href="../Despacho/OEntrega Modificar.html">
+                            <button type="button" class="btn btn-dark me-2" >Modificar</button>
+                        </a>
+                      <td>
+                            <a href="../Despacho/OEntrega Archivar.html">
+                                <button type="button" class="btn btn-danger me-2" >Archivar</button>
+                            </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1,002</td>
+                      <td>placeholder</td>
+                      <td>irrelevant</td>
+                      <td>visual</td>
+                      <td>layout</td>
+                    </tr>
+                    <tr>
+                      <td>1,003</td>
+                      <td>data</td>
+                      <td>rich</td>
+                      <td>dashboard</td>
+                      <td>tabular</td>
+                    </tr>
+                    <tr>
+                      <td>1,003</td>
+                      <td>information</td>
+                      <td>placeholder</td>
+                      <td>illustrative</td>
+                      <td>data</td>
+                    </tr>
+                    <tr>
+                      <td>1,004</td>
+                      <td>text</td>
+                      <td>random</td>
+                      <td>layout</td>
+                      <td>dashboard</td>
+                    </tr>
 
+                  </tbody>
+                </table>
+              </div>
+        </div>
+    </section>
 
     <section id="">
         <div class="row ">
@@ -158,6 +172,16 @@
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--datatable javascript-->
+<script type="text/javascript" src="../DataTables/datatables.min.js"></script>
+<!--para usar botones en datatables js-->
+<script  src="../DataTables/Buttons-2.2.3/js/dataTables.buttons.min.js"></script>
+<script  src="../DataTables/JSZip-2.5.0/jszip.min.js"></script>
+<script  src="../DataTables/pdfmake-0.1.36/pdfmake.min.js"></script>
+<script  src="../DataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
+<script  src="../DataTables/Buttons-2.2.3/js/buttons.html5.min.js"></script>
+
+<!--validar los formularios js-->
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -173,13 +197,47 @@
             if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
-            } else {
-                alert('registro exitoso')
             }
+
             form.classList.add('was-validated')
         }, false)
         })
     })()
+</script>
+<!--datatables js-->
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable({
+      language : {
+        "lengthMenu": "Mostrar _MENU_ registros",
+
+      },
+      //para usar los botones
+      responsive: "true",
+      dom: 'Bfrtilp',
+      buttons:[
+        {
+          extend: 'excelHtml5',
+          text: '<i class="fas fa-file-excel"></i> ',
+          titleAttr: 'Exportar a Excel',
+          className: 'btn btn-success'
+        },
+        {
+          extend: 'pdfHtml5',
+          text: '<i class="fas fa-file-pdf"></i> ',
+          titleAttr: 'Exportar a PDF',
+          className: 'btn btn-danger'
+        },
+        {
+          extend: 'print',
+          text: '<i class="fa fa-print"></i> ',
+          titleAttr: 'Imprimir',
+          className: 'btn btn-info'
+        },
+      ]
+    });
+  });
+
 </script>
 
 </html>

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../textilesElRedil/assets/images/favicon.png">
-    <title>Pagina de Inicio</title>
+    <title>Orden de Entrega</title>
     <!-- Custom CSS -->
     <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -233,67 +233,222 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Análisis</h4>
-                                        <h5 class="card-subtitle">Ventas último mes</h5>
+                                <div class="col-12 grid-margin">
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <h4 class="card-title">Horizontal Two column</h4>
+                                        <form class="form-control needs-validation" novalidate action="../Despacho/OEntrega_Consultar.html" method="post">
+                                            <h5> Orden de Entrega</h5>
+                            
+                                            <label class="form-control-label" id="id_ordenPago">Id Orden de Venta: </label>
+                                            <input type="text" name="id_ordenVenta" class="form-control" placeholder="Ingrese Id Orden de Venta" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="nombre">Nombre Cliente: </label>
+                                            <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="correo">Correo: </label>
+                                            <input type="email" name="correo" class="form-control" placeholder="Ingrese el correo" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="fechaVenta">Fecha de Venta: </label>
+                                            <input type="date" name="fechaVenta" class="form-control" placeholder="Ingrese la fecha de venta" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="fechaEntrega">Fecha de Entrega: </label>
+                                            <input type="date" name="fechaEntrega" class="form-control" placeholder="Ingrese la fecha de entrega" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="celular">Celular: </label>
+                                            <input type="text" name="celular" class="form-control" placeholder="Ingrese su número de celular" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="dirección">Dirección: </label>
+                                            <input type="text" name="dirección" class="form-control" placeholder="Ingrese la dirección de entrega" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="barrio">Barrio: </label>
+                                            <input type="text" name="barrio" class="form-control" placeholder="Ingrese el barrio" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="idProducto">Id Producto: </label>
+                                            <input type="text" name="idProducto" class="form-control" placeholder="Ingrese Id Producto" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="cantidad">Cantidad Producto: </label>
+                                            <input type="text" name="cantidad" class="form-control" placeholder="Ingrese la cantidad del Producto" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="valorRecibido">Valor Recibido: </label>
+                                            <input type="text" name="valorRecibido" class="form-control" placeholder="Ingrese el valor recibido" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <label class="form-control-label" id="valorTotal">Valor Total: </label>
+                                            <input type="text" name="valorTotal" class="form-control" placeholder="Ingrese el valor total" required="true">
+                                            <div class="valid-feedback">Validado ok</div>
+                                            <div class="invalid-feedback">Debe completar este campo</div>
+                            
+                                            <div class="vstack gap-2 col-md-5 mx-auto">
+                                                <button class="btn btn-success">Registrar</button>
+                                                <button type="button" class="btn btn-outline-secondary">Cancelar</button>
+                                            </div>
+                                        </form>
+
+
+
+
+                                        <form class="form-sample">
+                                          <p class="card-description"> Personal info </p>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">First Name</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Last Name</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gender</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Date of Birth</label>
+                                                <div class="col-sm-9">
+                                                  <input class="form-control" placeholder="dd/mm/yyyy" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Category</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control">
+                                                    <option>Category1</option>
+                                                    <option>Category2</option>
+                                                    <option>Category3</option>
+                                                    <option>Category4</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Membership</label>
+                                                <div class="col-sm-4">
+                                                  <div class="form-radio">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked> Free </label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                  <div class="form-radio">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2"> Professional </label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <p class="card-description"> Address </p>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Address 1</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">State</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Address 2</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Postcode</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">City</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Country</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control">
+                                                    <option>America</option>
+                                                    <option>Italy</option>
+                                                    <option>Russia</option>
+                                                    <option>Britain</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <!-- column -->
-                                    <div class="col-lg-9">
-                                        <div class="flot-chart">
-                                            <div class="flot-chart-content" id="flot-line-chart"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-user m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">2540</h5>
-                                                   <small class="font-light">Total Users</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">120</h5>
-                                                   <small class="font-light">New Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-cart-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">656</h5>
-                                                   <small class="font-light">Total Shop</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-tag m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">9540</h5>
-                                                   <small class="font-light">Total Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-table m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">100</h5>
-                                                   <small class="font-light">Pending Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-globe m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">8540</h5>
-                                                   <small class="font-light">Online Orders</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- column -->
-                                </div>
+                                  </div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -306,6 +461,9 @@
             <!-- footer -->
             <!-- ============================================================== -->
 
+            
+            
+            
             <footer class="footer text-center">
                 © 2022 Textiles <a href="../textilesElRedil/index.html">Emanuel</a>.
             </footer>

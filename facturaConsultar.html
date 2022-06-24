@@ -10,22 +10,23 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Orden de entrega</title>
+    <title> Factura </title>
     <!-- Custom CSS -->
-    <link href="assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
-    <link href="assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/quill/dist/quill.snow.css">
     <link href="dist/css/style.min.css" rel="stylesheet">
-
     <!--link sweetalert-->
     <link rel="stylesheet" href="sweetalert/dist/sweetalert2.min.css">
 
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </head>
 
 <body>
@@ -57,9 +58,9 @@
                         <!-- Logo icon -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                        <img src="../textilesElRedil/img-icon/Logo-ST.jpg" alt="homepage" width="" height="68" class="light-logo" />
-                        
+                            <img src="../textilesElRedil/img-icon/Logo-ST.jpg" alt="homepage" width="" height="68" class="light-logo" />
                         <!--End Logo icon -->
+                         <!-- Logo text -->
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -89,7 +90,6 @@
                         <!-- ============================================================== -->
                         <!-- create new -->
                         <!-- ============================================================== -->
-
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
@@ -106,13 +106,11 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-
                         <!-- ============================================================== -->
                         <!-- End Comment -->
                         <!-- ============================================================== -->
                         <!-- ============================================================== -->
                         <!-- Messages -->
-                        <!-- ============================================================== -->
 
                         <!-- ============================================================== -->
                         <!-- End Messages -->
@@ -150,9 +148,8 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Pagina Inicio</span></a></li>
-
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Inventario </span></a>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Inventario </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="icon-material.html" class="sidebar-link"><i class="mdi mdi-emoticon"></i><span class="hide-menu"> Material Icons </span></a></li>
                                 <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><i class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Font Awesome Icons </span></a></li>
@@ -160,20 +157,19 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Ventas </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-basic.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Venta </span></a></li>
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Vent </span></a></li>
+                                <li class="sidebar-item"><a href="facturaRegistrar.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Factura </span></a></li>
+                                <li class="sidebar-item"><a href="novedadEnRegistrar.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Novedad factura </span></a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-calendar-check"></i><span class="hide-menu">Despacho </span></a>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-calendar-check"></i><span class="hide-menu">Despacho</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-
-                                <li class="sidebar-item"><a href="entregaRegistrar.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> Orden de entrega </span></a></li>
                                 <li class="sidebar-item"><a href="index2.html" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Dashboard-2 </span></a></li>
-                                <li class="sidebar-item"><a href="pages-gallery.html" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Gallery </span></a></li>
-                                <li class="sidebar-item"><a href="pages-invoice.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Invoice </span></a></li>
-                                <li class="sidebar-item"><a href="pages-chat.html" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> Chat Option </span></a></li>
+                                <li class="sidebar-item"><a href="entregaRegistrar.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> Orden Entrega </span></a></li>
+                                <li class="sidebar-item"><a href="novedadEnRegistrar.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Novedad Entrega </span></a></li>
                             </ul>
                         </li>
+
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -193,7 +189,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Despacho</h4>
+                        <h4 class="page-title">Ventas</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -222,16 +218,16 @@
                                 <div class="col-12 grid-margin">
                                     <div class="card">
                                       <div class="card-body">
-                                        <h4 class="card-title">Orden de entrega</h4>
+                                        <h4 class="card-title">Factura</h4>
                                         <div class="table-responsive" id="mydatatable-container">
                                           <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
                                               <thead class="thead-green">
                                                   <tr>
-                                                      <th>Id Orden Entrega</th>
+                                                      <th>Id Factura</th>
                                                       <th>Nombre cliente</th>
-                                                      <th>No. Documento cliente</th>
-                                                      <th>Fecha entrega</th>
-                                                      <th>Id Producto</th>
+                                                      <th>Id producto</th>
+                                                      <th>Valor unitario</th>
+                                                      <th>Valor Total</th>
                                                       <th>Modificar</th>
                                                       <th>Eliminar</th>
                                                   </tr>
@@ -249,42 +245,42 @@
                                               </tfoot>
                                               <tbody>
                                                   <tr>
-                                                      <td>1010</td>
+                                                      <td>101010</td>
                                                       <td>Juan Garcia</td>
-                                                      <td>23236689</td>
-                                                      <td>26/07/2022</td>
                                                       <td>23</td>
+                                                      <td>10000</td>
+                                                      <td>20000</td>
                                                       <td>
-                                                            <button onclick="modificarEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                            <button onclick="modificarFactura()"  class="btn btn-info me-2" >Modificar</button>
                                                       </td>
                                                       <td>
-                                                            <button onclick="archivarEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                            <button onclick="archivarFactura()" type="button" class="btn btn-danger me-2" >Archivar</button>
                                                       </td>
                                                   </tr>
                                                   <tr>
-                                                      <td>1020</td>
+                                                      <td>102010</td>
                                                       <td>Maria Lopez</td>
-                                                      <td>42890346</td>
-                                                      <td>20/07/2022</td>
-                                                      <td>31</td>
+                                                      <td>42</td>
+                                                      <td>12000</td>
+                                                      <td>36000</td>
                                                       <td>
-                                                        <button onclick="modificarEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                        <button onclick="modificarFactura()"  class="btn btn-info me-2" >Modificar</button>
                                                   </td>
                                                   <td>
-                                                        <button onclick="archivarEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                        <button onclick="archivarFactura()" type="button" class="btn btn-danger me-2" >Archivar</button>
                                                   </td>
                                                   </tr>
                                                   <tr>
-                                                      <td>1030</td>
+                                                      <td>103010</td>
                                                       <td>Susana Herrera</td>
-                                                      <td>294056327</td>
-                                                      <td>29/07/2022</td>
-                                                      <td>9</td>
+                                                      <td>29</td>
+                                                      <td>6000</td>
+                                                      <td>18000</td>
                                                       <td>
-                                                        <button onclick="modificarEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                        <button onclick="modificarFactura()"  class="btn btn-info me-2" >Modificar</button>
                                                   </td>
                                                   <td>
-                                                        <button onclick="archivarEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                        <button onclick="archivarFactura()" type="button" class="btn btn-danger me-2" >Archivar</button>
                                                   </td>
 
                                                   </tr>
@@ -296,9 +292,15 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
                 <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
@@ -325,8 +327,6 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="dist/js/jquery.ui.touch-punch-improved.js"></script>
-    <script src="dist/js/jquery-ui.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -339,10 +339,60 @@
     <script src="dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
-     <!-- this page js -->
-    <script src="assets/libs/moment/min/moment.min.js"></script>
-    <script src="assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
-    <script src="dist/js/pages/calendar/cal-init.js"></script>
+    <!-- This Page JS -->
+    <script src="assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="dist/js/pages/mask/mask.init.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+    <script src="assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+    <script src="assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+    <script src="assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/quill/dist/quill.min.js"></script>
+    <script>
+        //***********************************//
+        // For select 2
+        //***********************************//
+        $(".select2").select2();
+
+        /*colorpicker*/
+        $('.demo').each(function() {
+        //
+        // Dear reader, it's actually very easy to initialize MiniColors. For example:
+        //
+        //  $(selector).minicolors();
+        //
+        // The way I've done it below is just for the demo, so don't get confused
+        // by it. Also, data- attributes aren't supported at this time...they're
+        // only used for this demo.
+        //
+        $(this).minicolors({
+                control: $(this).attr('data-control') || 'hue',
+                position: $(this).attr('data-position') || 'bottom left',
+
+                change: function(value, opacity) {
+                    if (!value) return;
+                    if (opacity) value += ', ' + opacity;
+                    if (typeof console === 'object') {
+                        console.log(value);
+                    }
+                },
+                theme: 'bootstrap'
+            });
+
+        });
+        /*datwpicker*/
+        jQuery('.mydatepicker').datepicker();
+        jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+    </script>
 
 <!-- Validadción formulario JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -462,6 +512,7 @@
 <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
 
 </body>
 

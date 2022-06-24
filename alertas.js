@@ -33,6 +33,22 @@ if (result.isConfirmed) {
 }
 })
 }
+function registrarFactura()
+    {
+    Swal.fire({
+    title: '¿Seguro desea hacer el registro?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Confirmar'
+    }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        window.location.href = "facturaConsultar.html"
+    }
+    })
+    }
 
 function registrarEntrega()
     {
@@ -67,6 +83,24 @@ function registrarEntrega()
     }
     })
     }
+    
+    function modificarFactura()
+    {
+    Swal.fire({
+    title: '¿Seguro que desea editar la factura?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Confirmar'
+    }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        window.location.href = "facturaRegistrar.html"
+    }
+    })
+    }
+
 
     function modificarEntrega()
     {
@@ -85,6 +119,7 @@ function registrarEntrega()
     })
     }
 
+
     function modificarNovEntrega()
     {
     Swal.fire({
@@ -101,6 +136,26 @@ function registrarEntrega()
     }
     })
     }
+    function archivarFactura()
+    {
+        Swal.fire({
+            title: '¿Está seguro de eliminar la factura ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, elimínela!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Eliminado!',
+                'La factura ha sido eliminada',
+                'success'
+              )
+            }
+          })
+    }
+
 
     function archivarEntrega()
     {

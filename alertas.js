@@ -51,6 +51,23 @@ function registrarEntrega()
     })
     }
 
+    function registrarNovEntrega()
+    {
+    Swal.fire({
+    title: '¿Seguro desea hacer el registro?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Confirmar'
+    }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        window.location.href = "novedadEnConsultar.html"
+    }
+    })
+    }
+
     function modificarEntrega()
     {
     Swal.fire({
@@ -64,6 +81,23 @@ function registrarEntrega()
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
         window.location.href = "entregaRegistrar.html"
+    }
+    })
+    }
+
+    function modificarNovEntrega()
+    {
+    Swal.fire({
+    title: '¿Seguro que desea editar la novedad de entrega?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Confirmar'
+    }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        window.location.href = "novedadEnRegistrar.html"
     }
     })
     }
@@ -82,6 +116,26 @@ function registrarEntrega()
               Swal.fire(
                 'Eliminado!',
                 'La orden de entrega ha sido eliminada',
+                'success'
+              )
+            }
+          })
+    }
+
+    function archivarNovEntrega()
+    {
+        Swal.fire({
+            title: '¿Está seguro de eliminar la novedad de entrega ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, elimínela!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Eliminado!',
+                'La novedad de entrega ha sido eliminada',
                 'success'
               )
             }

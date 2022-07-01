@@ -10,17 +10,20 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Página principal System Textil</title>
-    <!-- Custom CSS -->
-    <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <title>Novedad entrega</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
+
+    <!--link sweetalert-->
+    <link rel="stylesheet" href="sweetalert/dist/sweetalert2.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 </head>
 
 <body>
@@ -51,10 +54,11 @@
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                           <!-- Dark Logo icon -->
-                        <img src="../Web-textiles/img-icon/Logo-ST.jpg" alt="homepage" width="" height="68" class="light-logo" />
-                        
+                            <!-- Dark Logo icon -->
+                            <img src="../Web-textiles/img-icon/Logo-ST.jpg" alt="homepage" width="" height="68" class="light-logo" />
                         <!--End Logo icon -->
+                         <!-- Logo text -->
+                             <!-- dark Logo text -->
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -84,7 +88,7 @@
                         <!-- ============================================================== -->
                         <!-- create new -->
                         <!-- ============================================================== -->
-                        
+
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
@@ -101,12 +105,16 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-
+                        
                         <!-- ============================================================== -->
                         <!-- End Comment -->
                         <!-- ============================================================== -->
                         <!-- ============================================================== -->
                         <!-- Messages -->
+                        <!-- ============================================================== -->
+       
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
                         <!-- ============================================================== -->
 
                         <!-- ============================================================== -->
@@ -115,11 +123,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> Mi Perfil</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Perfil</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Configuración</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Cerrar Sesión</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Cerrar sesión</a>
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -155,10 +163,11 @@
                                 <li class="sidebar-item"><a href="facturaConsultar.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Consultar factura </span></a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-calendar-check"></i><span class="hide-menu">Despacho </span></a>
+                        
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i><span class="hide-menu">Despacho </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="entregaRegistrar.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> Orden de entrega </span></a></li>
-                                <li class="sidebar-item"><a href="entregaConsultar.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Consultar Orden de  entrega </span></a></li>
+                                <li class="sidebar-item"><a href="entregaConsultar.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Consultar entrega</span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Novedades </span></a>
@@ -184,10 +193,10 @@
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-             <div class="page-breadcrumb">
+            <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Página Principal</h4>
+                        <h4 class="page-title">Despacho</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -207,135 +216,94 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
-                <!-- Sales Cards  -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-cyan text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
-                                <h6 class="text-white">Menú</h6>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-warning text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                                <h6 class="text-white">Inventario</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-danger text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                                <h6 class="text-white">Ventas</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-success text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
-                                <h6 class="text-white">Despacho</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Sales chart -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Análisis Ventas</h4>
-                                        <h5 class="card-subtitle">Último mes</h5>
-                                    </div>
+                                <div class="col-12 grid-margin">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Orden de entrega</h4>
+                                            <div class="table-responsive" id="mydatatable-container">
+                                              <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+                                                  <thead class="thead-green">
+                                                      <tr>
+                                                          <th>Id Orden Entrega</th>
+                                                          <th>Nombre transportador</th>
+                                                          <th>Placa vehiculo</th>
+                                                          <th>Estado entrega</th>
+                                                          <th>Modificar</th>
+                                                          <th>Eliminar</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tfoot>
+                                                      <tr>
+                                                          <th>Filter..</th>
+                                                          <th>Filter..</th>
+                                                          <th>Filter..</th>
+                                                          <th>Filter..</th>
+                                                          <th>Filter..</th>
+                                                          <th>Filter..</th>
+                                                      </tr>
+                                                  </tfoot>
+                                                  <tbody>
+                                                      <tr>
+                                                          <td>1010</td>
+                                                          <td>Juan Garcia</td>
+                                                          <td>CVD-232</td>
+                                                          <td>Entregado</td>
+                                                          <td>
+                                                                <button onclick="modificarNovEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                          </td>
+                                                          <td>
+                                                                <button onclick="archivarNovEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>1020</td>
+                                                          <td>Maria Lopez</td>
+                                                          <td>GRL-346</td>
+                                                          <td>En proceso</td>
+                                                          <td>
+                                                            <button onclick="modificarNovEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                      </td>
+                                                      <td>
+                                                            <button onclick="archivarNovEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                      </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>1030</td>
+                                                          <td>Susana Herrera</td>
+                                                          <td>ITH-327</td>
+                                                          <td>Reprogramado</td>
+                                                          <td>
+                                                            <button onclick="modificarNovEntrega()"  class="btn btn-info me-2" >Modificar</button>
+                                                      </td>
+                                                      <td>
+                                                            <button onclick="archivarNovEntrega()" type="button" class="btn btn-danger me-2" >Archivar</button>
+                                                      </td>
+    
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+    
                                 </div>
-                                <div class="row">
-                                    <!-- column -->
-                                    <div class="col-lg-9">
-                                        <div class="flot-chart">
-                                            <div class="flot-chart-content" id="flot-line-chart"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-user m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">2540</h5>
-                                                   <small class="font-light">Total Users</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">120</h5>
-                                                   <small class="font-light">New Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-cart-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">656</h5>
-                                                   <small class="font-light">Total Shop</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-tag m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">9540</h5>
-                                                   <small class="font-light">Total Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-table m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">100</h5>
-                                                   <small class="font-light">Pending Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-globe m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">8540</h5>
-                                                   <small class="font-light">Online Orders</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- column -->
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- ============================================================== -->
-                <!-- Sales chart -->
+                <!-- End PAge Content -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
+                <!-- Right sidebar -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-6">
-                    </div>
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <!-- Card -->
-                    </div>
-                </div>
+                <!-- .right-sidebar -->
                 <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
+                <!-- End Right sidebar -->
                 <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
@@ -365,6 +333,7 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
     <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
     <script src="assets/extra-libs/sparkline/sparkline.js"></script>
     <!--Wave Effects -->
@@ -373,18 +342,126 @@
     <script src="dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <!-- <script src="dist/js/pages/dashboards/dashboard1.js"></script> -->
-    <!-- Charts js Files -->
-    <script src="assets/libs/flot/excanvas.js"></script>
-    <script src="assets/libs/flot/jquery.flot.js"></script>
-    <script src="assets/libs/flot/jquery.flot.pie.js"></script>
-    <script src="assets/libs/flot/jquery.flot.time.js"></script>
-    <script src="assets/libs/flot/jquery.flot.stack.js"></script>
-    <script src="assets/libs/flot/jquery.flot.crosshair.js"></script>
-    <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="dist/js/pages/chart/chart-page-init.js"></script>
 
+<!-- Validadción formulario JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            } else {
+                alert('registro exitoso')
+            }
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+</script>
+
+<!-- link sweetalert -->
+<script src="sweetalert/dist/sweetalert2.all.min.js"></script>
+<script src="../Web-textiles/alertas.js"></script>
+
+<!-- js datatable -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#mydatatable tfoot th').each(function () {
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="Filtrar.." />');
+        });
+  
+        var table = $('#mydatatable').DataTable({
+            "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+            "responsive": true,
+            "language": {
+                /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+                "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+            },
+            "order": [
+                [0, "desc"]
+            ],
+            "initComplete": function () {
+                this.api().columns().every(function () {
+                    var that = this;
+  
+                    $('input', this.footer()).on('keyup change', function () {
+                        if (that.search() !== this.value) {
+                            that
+                                .search(this.value)
+                                .draw();
+                        }
+                    });
+                })
+            },
+            /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+            "buttons": [
+                {
+                    extend: 'csvHtml5',
+                    text:   '<i class="fas fa-file-csv"></i>',
+                    titleAttr: 'Export a Csv',
+                    className: 'btn btn-danger' 
+                },
+                {
+                    extend: 'excelHtml5',
+                    text:   '<i class="fas fa-file-excel"></i>',
+                    titleAttr: 'Export a Excel',
+                    className: 'btn btn-success' 
+                },
+  
+                {
+                    extend: 'pdfHtml5',
+                    text:   '<i class="fas fa-file-pdf"></i>',
+                    titleAttr: 'Export a .Pdf',
+                    className: 'btn btn-primary' 
+                },
+  
+                {
+                    extend: 'print',
+                    text:   '<i class="fa fa-print" aria-hidden="true"></i>',
+                    titleAttr: 'Imprimir',
+                    className: 'btn btn-primary' 
+                },
+               /* 'csv', 'excel', 'pdf', 'print' */
+            ]
+        });
+    });
+  </script>
+  
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+  
+  <!-- Datatables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+  <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+  
+  <!--font awesome-->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Buttons -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+  <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+  <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  
 </body>
 
 </html>
